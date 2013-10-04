@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+  <title>sndstream App</title> 
+  <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+
+  <link rel="apple-touch-icon" href="sndstream-icon.png"/>
+  <link rel="apple-touch-icon-precomposed" href="sndstream-icon.png"/>
+  <link rel="apple-touch-startup-image" href="sndstream-startup.png" />
+
+  <link rel="stylesheet" href="jquery.mobile.css" />
+  <link rel="stylesheet" href="sndstream.css" />
+
+  <script src="phonegap.0.9.4.min.js"></script>
+  <script src="jquery.js"></script>
+  <script src="jquery.mobile.js"></script>
+  <script src="sndstream.js"></script>
+</head> 
+<body> 
+<div id="main" data-role="page">
+
+  <div data-role="header" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+	<li><a id="nav_sndstream"><span style="font-family:Edwardian Script ITC;font-size:14px">Sndstream</span></a></li>
+	<li><a id="nav_post">Post</a></li>
+	<li><a id="nav_follow">Follow</a></li>
+      </ul>
+    </div
+  </div>
+
+  <div id="con_sndstream" data-role="content">	
+    <div id="sndstream_register">
+      <h2>Registration</h2>
+		
+	   <a target="_blank" id="sndstream_twitter" class="signin">
+        <img src="twitter.png">
+      </a>
+
+      <a target="_blank" rel="external" id="sndstream_facebook" class="signin">
+        <img src="facebook.png">
+      </a>
+      
+	  
+      <label>Or Create a New Username:</label><br/>
+      <input id="sndstream_username"><br/>
+      <a id="btn_register" data-role="button">Register</a>
+    </div>
+
+	<div id="sndstream_complete">
+      <a id="btn_complete" data-role="button">Complete Registration</a>
+    </div>
+	
+    <ul id="sndstream_images">
+    </ul>
+    <li id="sndstream_image">
+      <span></span><br/>
+      <img/>
+    </li>
+
+  </div>
+
+  <div id="con_post" data-role="content">	
+    <a id="btn_recordsound" data-role="button">Record Sound</a>
+  
+    <a id="btn_upload" data-role="button">Upload Sound</a>
+	
+    <p id="post_msg"></p></br>
+	
+	Download:<input id="txt_download"></br>
+	
+	<a id="btn_download" data-role="button">Download Sound</a>
+	
+  </div>
+
+  <div id="con_follow" data-role="content">	
+    <h3 id="follow_user"></h3>
+
+    <h2>Followers</h2>
+    <ul id="follow_followers">
+    </ul>
+
+    <h2>Following</h2>
+
+    <div data-role="collapsible" data-collapsed="true">
+    <h3>Search:</h3>
+    <input id="follow_search"><br/>
+    <a id="btn_search" data-role="button">Search</a><br/>
+    <ul id="follow_results">
+    </ul>
+    </div>
+
+    <ul id="follow_following">
+    </ul>
+    <li id="follow_followee">
+      <p class="username">username</p>
+      <a class="follow" data-role="button"></a>
+    </li>
+    
+
+  </div>
+
+</div>
+</body>
+</html>
